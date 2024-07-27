@@ -55,7 +55,7 @@ const updateUserController = async (req, res) => {
     // Update
 
     const { userName, address, phone } = req.body;
-    if (userName) user.userName = userName; // username che  to ani andar user name  che e rakho kato pachi latest aave che ani sathe replace kari nakho
+    if (userName) user.userName = userName; 
     if (address) user.address = address;
     if (phone) user.phone = phone;
 

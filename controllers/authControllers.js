@@ -57,8 +57,7 @@ const registerController = async (req, res) => {
 
 const loginController = async (req, res) => {
   try {
-    const { email, password } = req.body; // destructuring
-
+    const { email, password } = req.body; 
     //validation
 
     if (!email || !password) {
@@ -91,7 +90,7 @@ const loginController = async (req, res) => {
       expiresIn: "60d",
     });
 
-    // user.password = undefined;  - for hide password
+
     res.status(200).send({
       success: true,
       message: "Login Sucessfully",

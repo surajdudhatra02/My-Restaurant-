@@ -71,7 +71,7 @@ const updateCategoryController = async (req, res) => {
         const {id} = req.params
         const { title, imageUrl} = req.body
 
-        const updatedCategory = await categoryModel.findByIdAndUpdate(id, {title, imageUrl}, {new:true}) // new true hase to j update thase
+        const updatedCategory = await categoryModel.findByIdAndUpdate(id, {title, imageUrl}, {new:true}) 
         if(!updatedCategory){
             return res.status(404).send({
                 success:false,
@@ -98,7 +98,7 @@ const updateCategoryController = async (req, res) => {
 
 const deleteCategoryController = async( req, res) => {
     try {
-        const {id} = req.params // req.params mathi id get karyu
+        const {id} = req.params 
         if(!id){
             return res.status(500).send({
                 success:false,

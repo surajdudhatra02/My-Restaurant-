@@ -261,7 +261,7 @@ const placeOrderController = async(req, res) => {
       payment: total,
       buyer: req.body.id
     });
-    await newOrder.save(); // for storing in databse
+    await newOrder.save(); 
     res.status(201).send({
       success: true,
       message: "Order placed successfully",
